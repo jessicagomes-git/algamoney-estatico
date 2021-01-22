@@ -39,9 +39,9 @@
             <tr>
               <td>{{lanc.pessoa}}</td>
               <td>{{lanc.descricao}}</td>
-              <td>{{lanc.dataVencimento}}</td>
-              <td class="col-valor">{{lanc.dataPagamento}}</td>
-              <td [style.color]="lanc.tipo === 'DESPESA' ? 'red': 'blue'" class="col-data">{{lanc.valor}}</td>
+              <td>{{lanc.dataVencimento | date:'dd/MM/yyyy'}}</td>
+              <td class="col-valor">{{lanc.dataPagamento | date:'dd/MM/yyyy'}}</td>
+              <td [style.color]="lanc.tipo === 'DESPESA' ? 'red': 'blue'" class="col-data">{{lanc.valor | number:'1.2-2'}}</td>
               <td><a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a> &nbsp;
                 <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
               </td>

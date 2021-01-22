@@ -1,0 +1,45 @@
+<div class="container">
+    <form>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <h1>Novo Lançamento</h1>
+            </div>
+            <div class="p-col-12">
+                <p-selectButton [options]="tipos" #tipo></p-selectButton>
+            </div>
+            <div class="p-col-6 p-col-md-6 p-lg-3">
+                <label class="display-block">Vencimento</label>
+                <p-calendar dateFormat="dd/mm/yy" [readonlyInput]="true" [showIcon]="true"></p-calendar>
+            </div>
+            <div class="p-col-6 p-col-md-6 p-lg-3">
+                <label class="display-block">{{tipo.value === 'RECEITA' ? 'Recebimento' : 'Pagamento'}}</label>
+                <p-calendar dateFormat="dd/mm/yy" [readonlyInput]="true" [showIcon]="true"></p-calendar>
+            </div>
+            <div class="p-col-12 p-col-md-10 p-lg-10">
+                <label class="display-block">Descrição</label>
+                <input pInputText type="text" >
+            </div>
+            <div class="p-col-12 p-col-md-2 p-lg-2">
+                <label class="display-block">Valor</label>
+                <p-inputNumber placeholder="0,00"></p-inputNumber>
+            </div>
+            <div class="p-col-12  p-col-md-12 p-lg-6">
+                <label class="display-block">Categoria</label>
+                <p-dropdown [options]="categorias" optionLabel="label" [filter]="true" placeholder="Selecione"></p-dropdown>
+            </div>
+            <div class="p-col-12  p-col-md-12 p-lg-6">
+                <label class="display-block">Pessoa</label>
+                <p-dropdown [options]="pessoas"  optionLabel="label" [filter]="true" placeholder="Selecione"></p-dropdown>
+            </div>
+            <div class="p-col-12">
+                <label class="display-block">Observação</label>
+                <textarea [rows]="3"  pInputTextarea autoResize="autoResize"></textarea>
+            </div>
+            <div class="p-col-12">
+                <button style="margin-right: 5px;" type="submit" label="Salvar" pButton></button>
+                <button class="p-button-info" type="submit" label="Novo" pButton></button>
+                <a href="#" class="posicao">Voltar para a pesquisa</a>
+            </div>
+        </div>
+    </form>
+</div>

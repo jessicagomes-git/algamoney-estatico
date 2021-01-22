@@ -25,3 +25,19 @@ label{
     width: 120px;
     text-align: center;
 }
+.display-block{
+    display: block;
+}
+input{
+    width: 100%;
+}
+a{
+    text-decoration:none;
+    color: #337ab7;
+}
+.p-calendar{
+    width: 100%;
+}
+.p-dropdown {
+    width: 100%;
+}
