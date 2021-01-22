@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LancamentoCadastroComponent implements OnInit {
 
+  msgs = 'Informe uma descrição';
+
   tipos = [
     {label: "Receita" , value: 'RECEITA'},
     {label: "Despesa" , value: 'DESPESA'}
