@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LancamentosPesquisaComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  lancamentos = [
+  lancamentos = [ 
     {
       tipo: 'DESPESA', descricao: 'Compra de pão', dataVencimento: new Date(2017, 6 ,30),
       dataPagamento: new Date(2017, 6 ,28), valor: 4.55, pessoa: 'Padaria do José'
